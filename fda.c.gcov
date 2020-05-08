@@ -1,0 +1,36 @@
+        -:    0:Source:fda.c
+        -:    0:Graph:fda.gcno
+        -:    0:Data:fda.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdlib.h>
+        -:    2:#include <string.h>
+        -:    3:#include <stdio.h>
+        -:    4:#include "fda.h"
+        -:    5:
+        1:    6:int count (char * filename){
+        -:    7:  char buffer[1024] ;
+        -:    8:  char *record,*line;
+        1:    9:  int i=0,j=0;
+        -:   10:  int arr[10][200];
+        1:   11:  int counter=0;
+        -:   12:
+        1:   13:  FILE *fstream = fopen("2018Recalls.xml","r");
+        1:   14:  if(fstream == NULL) {
+    #####:   15:    printf("\n file opening failed ");
+    #####:   16:    return -1 ;
+        -:   17:  }
+     2625:   18:  while((line=fgets(buffer,sizeof(buffer),fstream))!=NULL) {
+     2623:   19:    char *token = strtok(buffer,"<Brand>");
+        -:   20:
+    10477:   21:    while( token != NULL ) {
+     5231:   22:      counter++;
+     5231:   23:      printf( " %s\n",token);
+     5231:   24:      token = strtok(NULL,",");
+        -:   25:    }
+        -:   26:
+        -:   27:  }
+        1:   28:  return counter;
+        -:   29:}
+        -:   30:
+        -:   31:

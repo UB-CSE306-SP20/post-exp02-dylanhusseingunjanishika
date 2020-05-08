@@ -14,12 +14,7 @@ void runFileTest0() {/*test for count func*/
 
 }
 
-void runFileTest0() {/*test for */   
-	 
-
-}
-
-                                                                
+                                                               
 void runFileTest1() {/*test for */                
   
 }
