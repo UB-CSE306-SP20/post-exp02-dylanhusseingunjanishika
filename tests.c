@@ -13,6 +13,11 @@ void runFileTest0() {/*test for count func*/
   CU_ASSERT_EQUAL(expected, actual);
 }
 
+void runFileTest0() {/*test for */   
+	 
+
+}
+
                                                                 
 void runFileTest1() {/*test for */                
   
