@@ -2,7 +2,7 @@
 #define FDA
 #include<stdio.h>
 
-void count(char* str);
+int count(char* str);
 void print(char* str);
 void help();
 void quit();
