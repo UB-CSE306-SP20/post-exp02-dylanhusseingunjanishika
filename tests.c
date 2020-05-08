@@ -11,6 +11,7 @@ void runFileTest0() {/*test for count func*/
   int actual = 291;//counted every product in 2018Recalls.xml; total is 291
   int expected = count(filename);
   CU_ASSERT_EQUAL(expected, actual);
+
 }
 
 void runFileTest0() {/*test for */   
