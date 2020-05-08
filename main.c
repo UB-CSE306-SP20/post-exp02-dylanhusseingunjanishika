@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
 	printf("help\n");
 	printf("count\n");
 	printf("quit\n");
-	printf("print\n)";
+	printf("print\n");
   }
   if(*argv[2]=='quit') {
         printf("quiting");
