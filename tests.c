@@ -6,8 +6,11 @@
 #include "fda.h"
 
 
-void runFileTest0() {/*test for */   
-  
+void runFileTest0() {/*test for count func*/
+  char * filename = "2018Recalls.xml";
+  int actual = 291;//counted every product in 2018Recalls.xml; total is 291
+  int expected = count(filename);
+  CU_ASSERT_EQUAL(expected, actual);
 }
 
                                                                 
@@ -41,7 +44,7 @@ int main()
 
   /* add the tests to the suite */
   if (
-      (NULL == CU_add_test(pSuite, "test on ", test_00))
+      (NULL == CU_add_test(pSuite, "test on count func", test_00))
       || (NULL == CU_add_test(pSuite, "test on ", test_01))
       )
     {
