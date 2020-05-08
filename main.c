@@ -26,12 +26,25 @@ int main(int argc, char* argv[]) {
 
   }
   printf(*argv[2]);
-  if (*argv[2]=='-counter')
+  if (*argv[2]=='-count')
     {
       printf("%d /n", counter);
 
     }
-
+  if(*argv[2]=='-print') {
+      //print the record
+      	
+  }
+  if(*argv[2]=='help') {
+	printf("help\n");
+	printf("count\n");
+	printf("quit\n");
+	printf("print\n)";
+  }
+  if(*argv[2]=='quit') {
+        printf("quiting");
+	return 0;
+  }
   return 0;
 }
                     
