@@ -1,4 +1,4 @@
-x#ifndef FDA
+#ifndef FDA
 #define FDA
 #include<stdio.h>
 
