@@ -7,7 +7,7 @@ int overwrite ( char filename)
  if(fstream == NULL) {
     printf("\n file opening failed ");
     return -1 ;}
- FILE* fptr = fopen(filename, "w");
+FILE fptr = fopen(filename, "w")
 if(fptr == NULL) {
 		printf("Could not find  file. Use save instead.\n");
 		

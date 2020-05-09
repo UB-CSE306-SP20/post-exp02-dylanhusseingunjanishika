@@ -3,19 +3,17 @@ OBJECTS = fda.o tests.o
 # OS identification from: https://stackoverflow.com/questions/714100/os-detecting-makefile
 OS := $(shell uname -s)
 
-ifeq ($(OS), Darwin) 
+ifeq ($(OS), Darwin)
   CUNIT_PATH_PREFIX = /usr/local/Cellar/cunit/2.1-3/
   CUNIT_DIRECTORY = cunit
 endif
-ifeq ($(OS), Linux) 
+ifeq ($(OS), Linux)
   CUNIT_PATH_PREFIX = /util/CUnit/
   CUNIT_DIRECTORY = CUnit/
 endif
 
 CC = gcc
-NO_DEBUG_FLAGS = -c -Wall -std=c11
-DEBUG_FLAGS = -g -c -Wall -std=c11
-FLAGS = $(DEBUG_FLAGS)
+FLAGS = -g -O0 -c -Wall -fprofile-arcs -ftest-coverage 
 
 EXE=main
 OBJECTS= fda.o
