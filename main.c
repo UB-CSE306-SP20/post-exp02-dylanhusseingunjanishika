@@ -27,16 +27,17 @@ int main(int argc, char* argv[]) {
 
   }
   printf("%s", *argv[2]);
-  if (*argv[2]=='-count')
+  if (*argv[2]=='count')
     {
       printf("%d /n", counter);
 
     }
-  if(*argv[2]=='-print') {
+  if(*argv[2]=='print') {
       //print the record
       	
   }
   if(*argv[2]=='help') {
+	printf("available commands\n");
 	printf("help\n");
 	printf("count\n");
 	printf("quit\n");
