@@ -1,0 +1,6 @@
+EAK SUMMARY:
+==30526==    definitely lost: 0 bytes in 0 blocks
+==30526==    indirectly lost: 0 bytes in 0 blocks
+==30526==      possibly lost: 0 bytes in 0 blocks
+==30526==    still reachable: 568 bytes in 1 blocks
+==30526==         suppressed: 0 bytes in 0 blocks
