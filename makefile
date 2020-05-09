@@ -17,6 +17,9 @@ NO_DEBUG_FLAGS = -c -Wall -std=c11
 DEBUG_FLAGS = -g -c -Wall -std=c11
 FLAGS = $(DEBUG_FLAGS)
 
+EXE=main
+OBJECTS= fda.o
+
 SRC = fda.c
 TST = tests.c
 GEX = fda-gprof
@@ -35,6 +38,9 @@ fda.o: fda.c
 
 tests.o: tests.c
 	gcc -c -g -O0 -Wall -std=c11 -I $(CUNIT_PATH_PREFIX)include/$(CUNIT_DIRECTORY) $(TST)
+
+main: main.c $(OBJECTS)
+	$(CC) -o $(EXE) $(OBJECTS) $(EXE).c -lm
 
 c-exec: fda.o
 	gcc -g -O0 -Wall $(FLAGS) $(CFLAGS) -o $(GEX) $(SRC) main.c
