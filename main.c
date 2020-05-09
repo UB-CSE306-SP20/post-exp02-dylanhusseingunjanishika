@@ -5,9 +5,10 @@
 
 int main(int argc, char* argv[]) {
   char buffer[1024] ;
-  char *record,*line;
-  int i=0,j=0;
-  int arr[10][200];
+  //  char *record;
+  char *line;
+  //  int i=0,j=0;
+  //  int arr[10][200];
   int counter=0;
 
   FILE *fstream = fopen("2018Recalls.xml","r");
@@ -25,7 +26,7 @@ int main(int argc, char* argv[]) {
     }
 
   }
-  printf(*argv[2]);
+  printf("%s", *argv[2]);
   if (*argv[2]=='-count')
     {
       printf("%d /n", counter);
